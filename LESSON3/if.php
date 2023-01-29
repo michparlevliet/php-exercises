@@ -41,8 +41,22 @@
     }
 
     // **************************************************
+    
+    if ($linkName and $linkImage) {
+      echo '<h2>'.$linkName.'</h2>';
+      echo "<img src=$linkImage>";
+    }
+    elseif (!$linkName) {
+      echo "<h2>$linkDescription</h2>";
+      echo "<img src=$linkImage>";
+    }
+    elseif (!$linkImage) {
+      echo '<h2>'.$linkName.'</h2>';
+      echo "";
+    }
 
-    echo '<h2>'.$linkName.'</h2>';
+    echo "<a href=$linkURL>Visit webpage</a>";
+    echo "<p>$linkDescription</p>";
 
     ?>
 
